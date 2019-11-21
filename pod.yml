@@ -1,0 +1,10 @@
+apiserver: v1
+kind: pod
+metadate: 
+ name: pod1
+spec:
+  selecter:
+    app: nginx
+  containers:
+   - name: nginx
+     image: nginx
