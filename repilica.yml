@@ -1,0 +1,19 @@
+apiversion: v1
+kind: replicacontroller
+metadata: 
+  name: replica
+spec:
+ replica: 3
+ selector:
+   app: nginx
+ template:
+   metadata: 
+    labels:
+      app:nginx
+      ver: "1.0"
+   spec: 
+    container:
+     - name: simple-pod
+       image: nginx
+       ports:
+        - containerport: 80
